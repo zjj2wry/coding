@@ -3,6 +3,29 @@ tensorflow 集群是由一系列的 tasks 来参与 tensorflow graph 的分布�
 
 为了创建一个集群，你在集群的每一个 task 上面都启动一个 tensorflow server，每一个 task 都运行在不同的机器上，你也可以运行多个 task    在相同的机器上。（例如：控制不同的 gpu 设备。
 
+## local server
+### 启动服务器端,server.join() 避免进程退出，同样会暴露一个grpc的端口。
+```
+$ python
+>>> import tensorflow as tf
+>>> c = tf.constant("Hello world!"))
+>>> server = tf.train.Server.create_local_server()
+>>> server.join()  
+I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:206] Initialize HostPortsGrpcChannelCache for job local -> {localhost:40767}
+I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:202] Started server with target: grpc://localhost:40767
+```
+### 客户端
+```
+$ python
+>>> import tensorflow as tf
+>>> c = tf.constant("Hello world!"))
+>>> server_target = "grpc://localhost:40767"
+>>> sess = tf.Session(server_target)
+>>> print(sess.run(c))
+>>> sess.close()  
+'Hello world!'
+```
+
 ## concept
 
 - task: task 代表一个单独的进程，对应一个 tensorflow server。
