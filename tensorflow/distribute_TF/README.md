@@ -7,12 +7,16 @@ tensorflow 集群是由一系列的 tasks 来参与 tensorflow graph 的分布�
 
 - task: task 代表一个单独的进程，对应一个 tensorflow server。
 - ps：parameter server，用来保存和更新变量。
-- worker：进行图的计算。
+- worker：进行图的计算,计算模型梯度的节点，得到的梯度向量会交付给ps更新模型。
 - job: job 可以是 ps 或者 worker，是 task 的集合，使用 job 的类型和 task index 确定一个具体的 task，然后创建一个server。
 - client：编写 tensorflow 图的计算的程序。python，c++ 等。
 - cluster：由很多的 job 组成，job 由很多的 task 组成。
 - master service：一个 rpc 服务提供远程连接 distribute device，实际上是一个 session target，master service 继承了 tensorflow session 的接口，主要的工作是协同 "worker services"。所有的tensorflow server 都继承了 master service。
-- worker service：一个 rpc 服务用来执行 tensorflow 图的计算使用本地的 devices，一个worker service 继承 worker_service.proto. 所有的tensorflow server 都继承了 worker service
+- worker service：一个 rpc 服务用来执行 tensorflow 图的计算使用本地的 devices，一个worker service 继承 worker_service.proto. 所有的tensorflow server 都继承了 worker service。
+- in-graph：整个集群由一个client来构建graph，并且由这个client来提交graph到集群中，其他worker只负责处理梯度计算的任务。
+- between-graph：一个集群中多个worker可以创建多个graph，但由于worker运行的代码相同因此构建的graph也相同，并且参数都保存到相同的ps中保证训练同一个模型，这样多个worker都可以构建graph和读取训练数据，适合大数据场景。
+synchronous training：同步训练每次更新梯度需要阻塞等待所有worker的结果。
+asynchronous training：异步训练不会有阻塞，训练的效率更高，在大数据和分布式的场景下一般使用异步训练。
 
 ## example 
 ```python
