@@ -38,8 +38,8 @@ $ python
 - worker service：一个 rpc 服务用来执行 tensorflow 图的计算使用本地的 devices，一个worker service 继承 worker_service.proto. 所有的tensorflow server 都继承了 worker service。
 - in-graph：整个集群由一个client来构建graph，并且由这个client来提交graph到集群中，其他worker只负责处理梯度计算的任务。
 - between-graph：一个集群中多个worker可以创建多个graph，但由于worker运行的代码相同因此构建的graph也相同，并且参数都保存到相同的ps中保证训练同一个模型，这样多个worker都可以构建graph和读取训练数据，适合大数据场景。
-synchronous training：同步训练每次更新梯度需要阻塞等待所有worker的结果。
-asynchronous training：异步训练不会有阻塞，训练的效率更高，在大数据和分布式的场景下一般使用异步训练。
+- synchronous training：同步训练每次更新梯度需要阻塞等待所有worker的结果。
+- asynchronous training：异步训练不会有阻塞，训练的效率更高，在大数据和分布式的场景下一般使用异步训练。
 
 ## example 
 ```python
