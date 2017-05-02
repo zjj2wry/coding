@@ -25,7 +25,7 @@ TensorFlow的Session对象是可以支持多线程的，因此多个线程可以
 
 所幸TensorFlow提供了两个类来帮助多线程的实现：tf.Coordinator和 tf.QueueRunner。从设计上这两个类必须被一起使用。Coordinator类可以用来同时停止多个工作线程并且向那个在等待所有工作线程终止的程序报告异常。QueueRunner类用来协调多个工作线程同时将多个张量推入同一个队列中。
 
-Coordinator
+## Coordinator
 Coordinator类用来帮助多个线程协同工作，多个线程同步终止。 其主要方法有：
 ```
 should_stop():如果线程应该停止则返回True。
@@ -54,7 +54,7 @@ coord.join(threads)
 ```
 显然，Coordinator可以管理线程去做不同的事情。上面的代码只是一个简单的例子，在设计实现的时候不必完全照搬。Coordinator还支持捕捉和报告异常, 具体可以参考Coordinator class的文档。
 
-QueueRunner
+## QueueRunner
 QueueRunner类会创建一组线程， 这些线程可以重复的执行Enquene操作， 他们使用同一个Coordinator来处理线程同步终止。此外，一个QueueRunner会运行一个closer thread，当Coordinator收到异常报告时，这个closer thread会自动关闭队列。
 
 您可以使用一个queue runner，来实现上述结构。 首先建立一个TensorFlow图表，这个图表使用队列来输入样本。增加处理样本并将样本推入队列中的操作。增加training操作来移除队列中的样本。
@@ -88,7 +88,7 @@ coord.request_stop()
 # And wait for them to actually do it.
 coord.join(threads)
 ```
-异常处理
+## 异常处理
 通过queue runners启动的线程不仅仅只处理推送样本到队列。他们还捕捉和处理由队列产生的异常，包括OutOfRangeError异常，这个异常是用于报告队列被关闭。 使用Coordinator的训练程序在主循环中必须同时捕捉和报告异常。 下面是对上面训练循环的改进版本。
 ```python
 try:
