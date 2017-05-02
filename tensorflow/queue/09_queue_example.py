@@ -36,5 +36,3 @@ with tf.Session() as sess:
 		data_batch, label_batch = sess.run([data_sample, label_sample])
 	coord.request_stop()
 	coord.join(enqueue_threads)
-
-
