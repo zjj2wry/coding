@@ -1,16 +1,16 @@
-1、通俗易懂的解释：
+### 1、通俗易懂的解释：
 http://www.cnblogs.com/codebean/archive/2011/07/25/2116043.html
 
-2、配置 demo：
+### 2、配置 demo：
 http://linuxvirtualserver.org/docs/ha/keepalived.html
 
-3、配置参数解释
+### 3、配置参数解释
 http://outofmemory.cn/wiki/keepalived-configuration
 
-4、基于keepalived 实现VIP转移，lvs，nginx的高可用
+### 4、基于keepalived 实现VIP转移，lvs，nginx的高可用
 http://limian.blog.51cto.com/7542175/1301776
 
-5、keeplived-vip（https://github.com/kubernetes/contrib/tree/master/keepalived-vip）
+### 5、keeplived-vip（https://github.com/kubernetes/contrib/tree/master/keepalived-vip）
 大致的思路：使用 configmap 保存 vip 和 service 的地址，controller 会监听service 和 endpoint 对象，然后和 configmap 中保存的 service 对比，没有问题会读取 pod，然后获取 node 的信息，得到网卡信息（因为 pod 使用的是hostnetwork），
 将数据渲染到 keeplived 的配置中。对于 vip 的添加 和 keeplived 的配置启动、reload 等都是使用二进制实现的。
 模版如下：
@@ -159,9 +159,9 @@ FWM  6 rr
   -> 192.168.1.233:3306           Local   1      0          0
   -> 192.168.1.213:3306           route   1      0          0
 ```
+```
 二台机器上的配置都是这样(^-^上面其实有小修改)，在这种架构中，我只要停止我的备份的 keepalived ，就能正常的工作，不然一定有其中一台数据库连接到最后就中断停止在那个地方不动了。通过抓包，大量包被不断的转发来转发去。
 我们来详细分析一下。
-
 客户端发送连接的请求到  VIP 的指定的端口
 
 当前的 director 会选择二个 realserver 来转发请求,会传送数据给 localnode 的本机网卡或者备份的机器上指定的那个 MAC 的 eth0  (同时他也做为 realserver) . 正常的 LVS ，这些数据包会被监听这个 VIP 的程序接收。
@@ -215,3 +215,4 @@ virtual_server fwmark 4  {
         }
     }
 }
+```
