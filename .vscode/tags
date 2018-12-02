@@ -1,0 +1,183 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+07_convnet_mnist.py	../tensorflow/07_cnn/07_convnet_mnist.py	1;"	kind:file	line:1
+07_convnet_mnist_starter.py	../tensorflow/07_cnn/07_convnet_mnist_starter.py	1;"	kind:file	line:1
+09_queue_example.py	../tensorflow/queue/09_queue_example.py	1;"	kind:file	line:1
+BATCH_SIZE	../tensorflow/07_cnn/07_convnet_mnist.py	/^BATCH_SIZE = 128$/;"	kind:variable	line:23
+BATCH_SIZE	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^BATCH_SIZE = 128$/;"	kind:variable	line:20
+DROPOUT	../tensorflow/07_cnn/07_convnet_mnist.py	/^DROPOUT = 0.75$/;"	kind:variable	line:25
+DROPOUT	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^DROPOUT = 0.75$/;"	kind:variable	line:22
+FEATURE_SIZE	../tensorflow/distribute_TF/cancer_classifier.py	/^FEATURE_SIZE = 9$/;"	kind:variable	line:44
+FLAGS	../tensorflow/distribute_TF/cancer_classifier.py	/^FLAGS = flags.FLAGS$/;"	kind:variable	line:10
+LEARNING_RATE	../tensorflow/07_cnn/07_convnet_mnist.py	/^LEARNING_RATE = 0.001$/;"	kind:variable	line:22
+LEARNING_RATE	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^LEARNING_RATE = 0.001$/;"	kind:variable	line:19
+NUM_THREADS	../tensorflow/queue/09_queue_example.py	/^NUM_THREADS = 4$/;"	kind:variable	line:11
+N_CLASSES	../tensorflow/07_cnn/07_convnet_mnist.py	/^N_CLASSES = 10$/;"	kind:variable	line:15
+N_CLASSES	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^N_CLASSES = 10$/;"	kind:variable	line:12
+N_EPOCHS	../tensorflow/07_cnn/07_convnet_mnist.py	/^N_EPOCHS = 1$/;"	kind:variable	line:26
+N_EPOCHS	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^N_EPOCHS = 50$/;"	kind:variable	line:23
+N_SAMPLES	../tensorflow/queue/09_queue_example.py	/^N_SAMPLES = 1000$/;"	kind:variable	line:10
+R	../tensorflow/queue/help.py	/^R = cholesky(Sigma)$/;"	kind:variable	line:35
+SKIP_STEP	../tensorflow/07_cnn/07_convnet_mnist.py	/^SKIP_STEP = 10$/;"	kind:variable	line:24
+SKIP_STEP	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^SKIP_STEP = 10$/;"	kind:variable	line:21
+Sigma	../tensorflow/queue/help.py	/^Sigma = np.array([[1, 0.5], [1.5, 3]])$/;"	kind:variable	line:34
+X	../tensorflow/07_cnn/07_convnet_mnist.py	/^    X = tf.placeholder(tf.float32, [None, 784], name="X_placeholder")$/;"	kind:variable	line:35
+X	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    X = tf.placeholder(tf.float32, [None, 784], name="X_placeholder")$/;"	kind:variable	line:32
+Y	../tensorflow/07_cnn/07_convnet_mnist.py	/^    Y = tf.placeholder(tf.float32, [None, 10], name="Y_placeholder")$/;"	kind:variable	line:36
+Y	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    Y = tf.placeholder(tf.float32, [None, 10], name="Y_placeholder")$/;"	kind:variable	line:33
+absolute_import	../tensorflow/07_cnn/07_convnet_mnist.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:5
+accuracy	../tensorflow/07_cnn/07_convnet_mnist.py	/^        accuracy = tf.reduce_sum(tf.cast(correct_preds, tf.float32))$/;"	kind:variable	line:155
+accuracy	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^        accuracy = tf.reduce_sum(tf.cast(correct_preds, tf.float32))$/;"	kind:variable	line:213
+b	../tensorflow/07_cnn/07_convnet_mnist.py	/^    b = tf.get_variable('biases', [1024],$/;"	kind:variable	line:86
+b	../tensorflow/07_cnn/07_convnet_mnist.py	/^    b = tf.get_variable('biases', [N_CLASSES],$/;"	kind:variable	line:98
+b	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    b = tf.get_variable('biases', [1024],$/;"	kind:variable	line:109
+b	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    b = tf.get_variable('biases', [N_CLASSES],$/;"	kind:variable	line:129
+batch_size	../tensorflow/distribute_TF/cancer_classifier.py	/^batch_size = FLAGS.batch_size$/;"	kind:variable	line:41
+biases	../tensorflow/07_cnn/07_convnet_mnist.py	/^    biases = tf.get_variable('biases', [32],$/;"	kind:variable	line:50
+biases	../tensorflow/07_cnn/07_convnet_mnist.py	/^    biases = tf.get_variable('biases', [64],$/;"	kind:variable	line:67
+biases	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    biases = tf.get_variable('biases', [64],$/;"	kind:variable	line:86
+biases	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    biases = tf.get_variable(('biases',[32]),$/;"	kind:variable	line:60
+cancer_classifier.py	../tensorflow/distribute_TF/cancer_classifier.py	1;"	kind:file	line:1
+capacity	../tensorflow/distribute_TF/cancer_classifier.py	/^capacity = thread_number * batch_size + min_after_dequeue$/;"	kind:variable	line:43
+cholesky	../tensorflow/queue/help.py	/^from numpy.linalg import cholesky$/;"	kind:namespace	line:9
+ckpt	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    ckpt = tf.train.get_checkpoint_state(os.path.dirname('checkpoints\/convnet_mnist\/checkpoint'))$/;"	kind:variable	line:174
+conv	../tensorflow/07_cnn/07_convnet_mnist.py	/^    conv = tf.nn.conv2d(images, kernel, strides=[1, 1, 1, 1], padding='SAME')$/;"	kind:variable	line:52
+conv	../tensorflow/07_cnn/07_convnet_mnist.py	/^    conv = tf.nn.conv2d(pool1, kernel, strides=[1, 1, 1, 1], padding='SAME')$/;"	kind:variable	line:69
+conv	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    conv = tf.nn.conv2d(images,kernel,strides=[1,1,1,1],padding='SAME')$/;"	kind:variable	line:71
+conv	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    conv = tf.nn.conv2d(pool1, kernel, strides=[1, 1, 1, 1], padding='SAME')$/;"	kind:variable	line:88
+conv1	../tensorflow/07_cnn/07_convnet_mnist.py	/^    conv1 = tf.nn.relu(conv + biases, name=scope.name)$/;"	kind:variable	line:53
+conv2	../tensorflow/07_cnn/07_convnet_mnist.py	/^    conv2 = tf.nn.relu(conv + biases, name=scope.name)$/;"	kind:variable	line:70
+conv2	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    conv2 = tf.nn.relu(conv + biases, name=scope.name)$/;"	kind:variable	line:89
+coord	../tensorflow/queue/09_queue_example.py	/^	coord = tf.train.Coordinator()$/;"	kind:variable	line:31
+correct_preds	../tensorflow/07_cnn/07_convnet_mnist.py	/^        correct_preds = tf.equal(tf.argmax(preds, 1), tf.argmax(Y_batch, 1))$/;"	kind:variable	line:154
+correct_preds	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^        correct_preds = tf.equal(tf.argmax(preds, 1), tf.argmax(Y_batch, 1))$/;"	kind:variable	line:212
+covn1	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    covn1 = tf.nn.relu(conv+biases,name=scope.name)$/;"	kind:variable	line:72
+data	../tensorflow/queue/09_queue_example.py	/^data = 10 * np.random.randn(N_SAMPLES, 4) + 1$/;"	kind:variable	line:15
+division	../tensorflow/07_cnn/07_convnet_mnist.py	/^from __future__ import division$/;"	kind:namespace	line:6
+dropout	../tensorflow/07_cnn/07_convnet_mnist.py	/^dropout = tf.placeholder(tf.float32, name='dropout')$/;"	kind:variable	line:38
+dropout	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^dropout = tf.placeholder(tf.float32, name='dropout')$/;"	kind:variable	line:35
+enqueue_op	../tensorflow/queue/09_queue_example.py	/^enqueue_op = queue.enqueue_many([data, target])$/;"	kind:variable	line:22
+enqueue_threads	../tensorflow/queue/09_queue_example.py	/^	enqueue_threads = qr.create_threads(sess, coord=coord, start=True)$/;"	kind:variable	line:32
+entropy	../tensorflow/07_cnn/07_convnet_mnist.py	/^    entropy = tf.nn.softmax_cross_entropy_with_logits(labels= Y,logits=logits)$/;"	kind:variable	line:108
+entropy	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    entropy = tf.nn.softmax_cross_entropy_with_logits(labels=Y, logits=logits)$/;"	kind:variable	line:139
+epoch_number	../tensorflow/distribute_TF/cancer_classifier.py	/^epoch_number = FLAGS.epoch_number$/;"	kind:variable	line:39
+fc	../tensorflow/07_cnn/07_convnet_mnist.py	/^    fc = tf.nn.dropout(fc, dropout, name='relu_dropout')$/;"	kind:variable	line:93
+fc	../tensorflow/07_cnn/07_convnet_mnist.py	/^    fc = tf.nn.relu(tf.matmul(pool2, w) + b, name='relu')$/;"	kind:variable	line:91
+fc	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    fc = tf.nn.dropout(fc, dropout, name='relu_dropout')$/;"	kind:variable	line:121
+fc	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    fc = tf.nn.relu(tf.matmul(pool2, w) + b, name='relu')$/;"	kind:variable	line:118
+feed_dict	../tensorflow/07_cnn/07_convnet_mnist.py	/^                                        feed_dict={X: X_batch, Y:Y_batch, dropout: DROPOUT}) $/;"	kind:variable	line:152
+feed_dict	../tensorflow/07_cnn/07_convnet_mnist.py	/^                                feed_dict={X: X_batch, Y:Y_batch, dropout: DROPOUT}) $/;"	kind:variable	line:136
+feed_dict	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                                        feed_dict={X: X_batch, Y:Y_batch, dropout: DROPOUT}) $/;"	kind:variable	line:209
+feed_dict	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                                feed_dict={X: X_batch, Y:Y_batch, dropout: DROPOUT}) $/;"	kind:variable	line:192
+flags	../tensorflow/distribute_TF/cancer_classifier.py	/^flags = tf.app.flags$/;"	kind:variable	line:9
+global_step	../tensorflow/07_cnn/07_convnet_mnist.py	/^                                        global_step=global_step)$/;"	kind:variable	line:116
+global_step	../tensorflow/07_cnn/07_convnet_mnist.py	/^global_step = tf.Variable(0, dtype=tf.int32, trainable=False, name='global_step')$/;"	kind:variable	line:43
+global_step	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                                        global_step=global_step)$/;"	kind:variable	line:148
+global_step	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^global_step = tf.Variable(0, dtype=tf.int32, trainable=False, name='global_step')$/;"	kind:variable	line:40
+help.py	../tensorflow/queue/help.py	1;"	kind:file	line:1
+images	../tensorflow/07_cnn/07_convnet_mnist.py	/^    images = tf.reshape(X, shape=[-1, 28, 28, 1]) $/;"	kind:variable	line:47
+images	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    images = tf.reshape(X,shape=[-1,28,28,1])$/;"	kind:variable	line:46
+initial_step	../tensorflow/07_cnn/07_convnet_mnist.py	/^    initial_step = global_step.eval()$/;"	kind:variable	line:128
+initial_step	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    initial_step = global_step.eval()$/;"	kind:variable	line:180
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:51
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:68
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:87
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:99
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:49
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:66
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:85
+initializer	../tensorflow/07_cnn/07_convnet_mnist.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:97
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:110
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:130
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                        initializer=tf.random_normal_initializer())$/;"	kind:variable	line:87
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:108
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:128
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                        initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:85
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                    initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:59
+initializer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                    initializer=tf.truncated_normal_initializer())$/;"	kind:variable	line:61
+input_data	../tensorflow/07_cnn/07_convnet_mnist.py	/^from tensorflow.examples.tutorials.mnist import input_data$/;"	kind:namespace	line:13
+input_data	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^from tensorflow.examples.tutorials.mnist import input_data$/;"	kind:namespace	line:10
+input_features	../tensorflow/07_cnn/07_convnet_mnist.py	/^    input_features = 7 * 7 * 64$/;"	kind:variable	line:83
+input_features	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    input_features = 7 * 7 * 64$/;"	kind:variable	line:103
+kernel	../tensorflow/07_cnn/07_convnet_mnist.py	/^    kernel = tf.get_variable('kernel', [5, 5, 1, 32], $/;"	kind:variable	line:48
+kernel	../tensorflow/07_cnn/07_convnet_mnist.py	/^    kernel = tf.get_variable('kernels', [5, 5, 32, 64], $/;"	kind:variable	line:65
+kernel	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    kernel = tf.get_variable('kernel',[5,5,1,32],$/;"	kind:variable	line:58
+kernel	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    kernel = tf.get_variable('kernels', [5, 5, 32, 64], $/;"	kind:variable	line:84
+learning_rate	../tensorflow/distribute_TF/cancer_classifier.py	/^learning_rate = FLAGS.learning_rate$/;"	kind:variable	line:38
+logits	../tensorflow/07_cnn/07_convnet_mnist.py	/^    logits = tf.matmul(fc, w) + b$/;"	kind:variable	line:100
+logits	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    logits = tf.matmul(fc, w) + b$/;"	kind:variable	line:131
+loss	../tensorflow/07_cnn/07_convnet_mnist.py	/^    loss = tf.reduce_mean(entropy, name='loss')$/;"	kind:variable	line:110
+loss	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    loss = tf.reduce_mean(entropy, name='loss')$/;"	kind:variable	line:141
+main	../tensorflow/distribute_TF/cancer_classifier.py	/^def main(_):$/;"	kind:function	line:64
+math	../tensorflow/distribute_TF/cancer_classifier.py	/^import math$/;"	kind:namespace	line:4
+matplotlib	../tensorflow/queue/help.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:10
+min_after_dequeue	../tensorflow/distribute_TF/cancer_classifier.py	/^min_after_dequeue = FLAGS.min_after_dequeue$/;"	kind:variable	line:42
+mnist	../tensorflow/07_cnn/07_convnet_mnist.py	/^mnist = input_data.read_data_sets('MINIST_data', one_hot=True)$/;"	kind:variable	line:19
+mnist	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^mnist = input_data.read_data_sets("\/data\/mnist", one_hot=True)$/;"	kind:variable	line:16
+mu	../tensorflow/queue/help.py	/^mu = 3$/;"	kind:variable	line:15
+mu	../tensorflow/queue/help.py	/^mu = np.array([[1, 5]])$/;"	kind:variable	line:33
+n_batches	../tensorflow/07_cnn/07_convnet_mnist.py	/^    n_batches = int(mnist.test.num_examples\/BATCH_SIZE)$/;"	kind:variable	line:147
+n_batches	../tensorflow/07_cnn/07_convnet_mnist.py	/^    n_batches = int(mnist.train.num_examples \/ BATCH_SIZE)$/;"	kind:variable	line:131
+n_batches	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    n_batches = int(mnist.test.num_examples\/BATCH_SIZE)$/;"	kind:variable	line:204
+n_batches	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    n_batches = int(mnist.train.num_examples \/ BATCH_SIZE)$/;"	kind:variable	line:185
+np	../tensorflow/distribute_TF/cancer_classifier.py	/^import numpy as np$/;"	kind:namespace	line:6
+np	../tensorflow/queue/09_queue_example.py	/^import numpy as np$/;"	kind:namespace	line:8
+np	../tensorflow/queue/help.py	/^import numpy as np$/;"	kind:namespace	line:8
+optimizer	../tensorflow/07_cnn/07_convnet_mnist.py	/^optimizer = tf.train.AdamOptimizer(LEARNING_RATE).minimize(loss, $/;"	kind:variable	line:115
+optimizer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^optimizer = tf.train.AdamOptimizer(LEARNING_RATE).minimize(loss,$/;"	kind:variable	line:147
+os	../tensorflow/07_cnn/07_convnet_mnist.py	/^import os$/;"	kind:namespace	line:9
+os	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^import os$/;"	kind:namespace	line:6
+os	../tensorflow/distribute_TF/cancer_classifier.py	/^import os$/;"	kind:namespace	line:5
+padding	../tensorflow/07_cnn/07_convnet_mnist.py	/^                            padding='SAME')$/;"	kind:variable	line:59
+padding	../tensorflow/07_cnn/07_convnet_mnist.py	/^                            padding='SAME')$/;"	kind:variable	line:77
+padding	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^                            padding='SAME')$/;"	kind:variable	line:96
+plt	../tensorflow/queue/help.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:10
+pool1	../tensorflow/07_cnn/07_convnet_mnist.py	/^    pool1 = tf.nn.max_pool(conv1, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1],$/;"	kind:variable	line:58
+pool1	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    pool1 = tf.nn.max_pool(covn1,ksize=[1,2,2,1],strides=[1,2,2,1],padding='SAME')$/;"	kind:variable	line:78
+pool2	../tensorflow/07_cnn/07_convnet_mnist.py	/^    pool2 = tf.nn.max_pool(conv2, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1],$/;"	kind:variable	line:76
+pool2	../tensorflow/07_cnn/07_convnet_mnist.py	/^    pool2 = tf.reshape(pool2, [-1, input_features])$/;"	kind:variable	line:90
+pool2	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    pool2 = tf.nn.max_pool(conv2, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1],$/;"	kind:variable	line:95
+pool2	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    pool2 = tf.reshape(pool2, [-1, input_features])$/;"	kind:variable	line:113
+pool2	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    pool2 = tf.reshape(pool2, [-1, input_features])$/;"	kind:variable	line:117
+preds	../tensorflow/07_cnn/07_convnet_mnist.py	/^        preds = tf.nn.softmax(logits_batch)$/;"	kind:variable	line:153
+preds	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^        preds = tf.nn.softmax(logits_batch)$/;"	kind:variable	line:210
+print_function	../tensorflow/07_cnn/07_convnet_mnist.py	/^from __future__ import print_function$/;"	kind:namespace	line:7
+print_function	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^from __future__ import print_function$/;"	kind:namespace	line:4
+print_function	../tensorflow/queue/09_queue_example.py	/^from __future__ import print_function$/;"	kind:namespace	line:6
+qr	../tensorflow/queue/09_queue_example.py	/^qr = tf.train.QueueRunner(queue, [enqueue_op] * NUM_THREADS)$/;"	kind:variable	line:28
+queue	../tensorflow/queue/09_queue_example.py	/^queue = tf.FIFOQueue(capacity=50, dtypes=[tf.float32, tf.int32], shapes=[[4], []])$/;"	kind:variable	line:20
+read_and_decode	../tensorflow/distribute_TF/cancer_classifier.py	/^def read_and_decode(filename_queue):$/;"	kind:function	line:48
+s	../tensorflow/queue/help.py	/^s = np.dot(np.random.randn(sampleNo, 2), R) + mu$/;"	kind:variable	line:36
+s	../tensorflow/queue/help.py	/^s = np.random.normal(mu, sigma, sampleNo )$/;"	kind:variable	line:18
+s	../tensorflow/queue/help.py	/^s = sigma * np.random.randn(sampleNo ) + mu$/;"	kind:variable	line:23
+s	../tensorflow/queue/help.py	/^s = sigma * np.random.standard_normal(sampleNo ) + mu$/;"	kind:variable	line:28
+sampleNo	../tensorflow/queue/help.py	/^sampleNo = 1000;$/;"	kind:variable	line:12
+saver	../tensorflow/07_cnn/07_convnet_mnist.py	/^    saver = tf.train.Saver()$/;"	kind:variable	line:120
+saver	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    saver = tf.train.Saver()$/;"	kind:variable	line:169
+sigma	../tensorflow/queue/help.py	/^sigma = 0.1$/;"	kind:variable	line:16
+start_time	../tensorflow/07_cnn/07_convnet_mnist.py	/^    start_time = time.time()$/;"	kind:variable	line:130
+start_time	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    start_time = time.time()$/;"	kind:variable	line:182
+target	../tensorflow/queue/09_queue_example.py	/^target = np.random.randint(0, 2, size=N_SAMPLES) $/;"	kind:variable	line:18
+tf	../tensorflow/07_cnn/07_convnet_mnist.py	/^import tensorflow as tf$/;"	kind:namespace	line:12
+tf	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^import tensorflow as tf$/;"	kind:namespace	line:9
+tf	../tensorflow/distribute_TF/cancer_classifier.py	/^import tensorflow as tf$/;"	kind:namespace	line:3
+tf	../tensorflow/queue/09_queue_example.py	/^import tensorflow as tf$/;"	kind:namespace	line:7
+thread_number	../tensorflow/distribute_TF/cancer_classifier.py	/^thread_number = FLAGS.thread_number$/;"	kind:variable	line:40
+time	../tensorflow/07_cnn/07_convnet_mnist.py	/^import time $/;"	kind:namespace	line:10
+time	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^import time $/;"	kind:namespace	line:7
+total_correct_preds	../tensorflow/07_cnn/07_convnet_mnist.py	/^    total_correct_preds = 0$/;"	kind:variable	line:148
+total_correct_preds	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    total_correct_preds = 0$/;"	kind:variable	line:205
+total_loss	../tensorflow/07_cnn/07_convnet_mnist.py	/^            total_loss = 0.0$/;"	kind:variable	line:140
+total_loss	../tensorflow/07_cnn/07_convnet_mnist.py	/^    total_loss = 0.0$/;"	kind:variable	line:132
+total_loss	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^            total_loss = 0.0$/;"	kind:variable	line:197
+total_loss	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    total_loss = 0.0$/;"	kind:variable	line:187
+w	../tensorflow/07_cnn/07_convnet_mnist.py	/^    w = tf.get_variable('weights', [1024, N_CLASSES],$/;"	kind:variable	line:96
+w	../tensorflow/07_cnn/07_convnet_mnist.py	/^    w = tf.get_variable('weights', [input_features, 1024],$/;"	kind:variable	line:84
+w	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    w = tf.get_variable('weights', [1024, N_CLASSES],$/;"	kind:variable	line:127
+w	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    w = tf.get_variable('weights', [input_features, 1024],$/;"	kind:variable	line:107
+writer	../tensorflow/07_cnn/07_convnet_mnist.py	/^    writer = tf.summary.FileWriter('.\/my_graph\/mnist', sess.graph)$/;"	kind:variable	line:122
+writer	../tensorflow/07_cnn/07_convnet_mnist_starter.py	/^    writer = tf.summary.FileWriter('.\/my_graph\/mnist', sess.graph)$/;"	kind:variable	line:171

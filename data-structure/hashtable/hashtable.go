@@ -15,7 +15,7 @@ type Item struct {
 	value interface{}
 }
 
-func NewHashTabel(size int) *HashTable {
+func NewHashTable(size int) *HashTable {
 	items := make([]Item, size)
 	ht := &HashTable{
 		items: items,
@@ -122,7 +122,7 @@ func (h *HashTable) Get(key int) (interface{}, bool) {
 }
 
 func main() {
-	hashmap := NewHashTabel(8)
+	hashmap := NewHashTable(8)
 	for i := 0; i < 16; i++ {
 		hashmap.Set(i, i)
 	}
@@ -130,7 +130,7 @@ func main() {
 		item, ok := hashmap.Get(i)
 		fmt.Println(item, ok)
 	}
-	hashmap = NewHashTabel(8)
+	hashmap = NewHashTable(8)
 	hashmap.colisionResolution = hashmap.quadraticProbe
 	for i := 0; i < 16; i++ {
 		hashmap.Set(i, i)
